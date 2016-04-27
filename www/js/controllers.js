@@ -29,7 +29,6 @@ angular.module('app.controllers', [])
   
 .controller('simpleToDoAppCtrl', function($scope) {
 	$scope.removeTask = function(task) {
-		// do delete
 		if(confirm('Are you sure want to delete this task?')) {
           $scope.$storage.tasks.splice($scope.$storage.tasks.indexOf(task), 1);
       	}
@@ -50,36 +49,15 @@ angular.module('app.controllers', [])
 })
    
 .controller('editTodoItemCtrl', function($scope, $stateParams, TaskService) {
-	/*
-		$scope.task = $scope.$storage.tasks.reduce(function(carry, task){
-	        if(task.id == $stateParams.id)
-	            carry = task;
-	        return carry;
-	    }, {});
-	*/
+
  	$scope.task = TaskService.getTaskById($stateParams.id);
 
     $scope.update = function() {
-    	// find value in $scope.tasks
-    	// replace $scope.tasks[$index] = $scope.task;
+    	// do update
     }
 })
    
 .controller('toDoDetailsCtrl', function($scope, $stateParams, TaskService) {
-
-	// Received $stateParams.id
-	// You have few options to query details
-
-	// 1. LocalStorage
-	/*
-		$scope.task = $scope.$storage.tasks.reduce(function(carry, task){
-	        if(task.id == $stateParams.id)
-	            carry = task;
-	        return carry;
-	    }, {});
-    */
     $scope.task = TaskService.getTaskById($stateParams.id);
-    // 2. Call API Service, to get the details, based on id given
-	//$scope.task = APIService.details($stateParams.id);
 })
  
