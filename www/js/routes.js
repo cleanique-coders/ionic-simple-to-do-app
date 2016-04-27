@@ -23,7 +23,7 @@ angular.module('app.routes', [])
   })
 
   .state('editTodoItem', {
-    url: '/edit-todo/:id',
+    url: '/edit-todo/:id', // pass parameters to page
     templateUrl: 'templates/editTodoItem.html',
     controller: 'editTodoItemCtrl'
   })

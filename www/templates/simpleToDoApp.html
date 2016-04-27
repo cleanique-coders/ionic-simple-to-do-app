@@ -6,7 +6,10 @@
 	    <ion-list ng-repeat="task in $storage.tasks">
 
 	    	<!-- Passing task's id to route -->
-            <ion-item ui-sref="toDoDetails({id: task.id})">{{ task.name }}</ion-item>
+            <ion-item >
+            	<a ui-sref="toDoDetails({id: task.id})">{{ task.name }}</a>
+            	<a ng-click="removeTask(task)" class="button button-positive">Delete</a>
+            </ion-item>
             
         </ion-list>
 
