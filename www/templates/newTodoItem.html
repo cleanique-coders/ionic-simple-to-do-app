@@ -1,0 +1,25 @@
+<ion-view title="New todo item" id="page3">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">New Item</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input" name="name">
+                        <span class="input-label">Name</span>
+
+                        <!-- ng-model: bind with element with model -->
+                        <input type="text" placeholder="Your todo name" name="name" ng-model="$parent.name">
+                    </label>
+
+                    <label class="item item-input" name="description">
+                        <span class="input-label">Description</span>
+                        <textarea rows="4" placeholder="You todo description" name="description" ng-model="$parent.description"> </textarea>
+                    </label>
+
+                    <!-- ng-click: call function defined in $scope -->
+                    <a ui-sref="simpleToDoApp" ng-click="save()" id="newTodoItem-button2" class="button button-balanced  button-block">Save</a>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

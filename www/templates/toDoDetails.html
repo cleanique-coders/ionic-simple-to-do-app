@@ -1,0 +1,15 @@
+<ion-view title="ToDo Details" hide-nav-bar="true" id="page5">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div>
+            <div class="bar bar-header">
+                <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="simpleToDoApp">Back</a>
+                <h1 class="title">Task Details</h1>
+                <button class="button" ui-sref="editTodoItem({id:task.id})">Edit</button>
+            </div>
+            <br>
+            <hr>
+            <h1>{{ task.name }}</h1>
+            <p>{{ task.description }}</p>
+        </div>
+    </ion-content>
+</ion-view>

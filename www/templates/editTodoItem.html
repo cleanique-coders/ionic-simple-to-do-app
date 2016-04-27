@@ -1,0 +1,20 @@
+<ion-view title="Edit todo item" id="page6">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">Edit Item</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input" name="name">
+                        <span class="input-label">Name</span>
+                        <input type="text" placeholder="Your todo name" name="name" ng-model="task.name">
+                    </label>
+                    <label class="item item-input" name="description">
+                        <span class="input-label">Description</span>
+                        <textarea placeholder="You todo description" name="description" ng-model="task.description"> </textarea>
+                    </label>
+                    <a ui-sref="simpleToDoApp" id="editTodoItem-button3" class="button button-balanced  button-block">Update</a>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

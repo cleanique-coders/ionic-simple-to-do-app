@@ -1,0 +1,14 @@
+<ion-view title="Simple ToDo App" id="page1">
+    <ion-content padding="true" class="has-header">
+        <a ui-sref="newTodoItem" id="simpleToDoApp-button1" class="button button-positive  button-block icon ion-android-add-circle"></a>
+        
+        <!-- Foreach loop, read through tasks -->
+	    <ion-list ng-repeat="task in $storage.tasks">
+
+	    	<!-- Passing task's id to route -->
+            <ion-item ui-sref="toDoDetails({id: task.id})">{{ task.name }}</ion-item>
+            
+        </ion-list>
+
+    </ion-content>
+</ion-view>
