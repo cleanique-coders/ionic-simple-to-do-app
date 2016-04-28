@@ -11,6 +11,12 @@ angular.module('app.services', [])
 		},
 		search : function(keyword) {
 			// from keyword given, search from localStorage or can call API
+		},
+		save : function(params) {
+
+		},
+		update : function(params) {
+			
 		}
 	}
 })
